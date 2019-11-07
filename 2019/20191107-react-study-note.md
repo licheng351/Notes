@@ -49,3 +49,8 @@ React的合成事件系统是属于原生浏览器事件的子集。
 修改现有React组件的行为。对于某些第三方组件，我们不想触碰其内部逻辑，可以通过独立于原有组件的函数，产生新的组件并且对原组件没有侵害。
 
 根据返回的新组件和传入组件参数的关系，高阶组件的实现方式可以分为两大类：代理方式的高阶组件，继承方式的高阶组件。
+
+### References
+https://github.com/Marco2333/react-demo
+https://zh-hans.reactjs.org/docs/rendering-elements.html
+http://huziketang.mangojuice.top/books/react/lesson1
