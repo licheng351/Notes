@@ -1,5 +1,4 @@
 ### React中创建组件的方式有3种
-参考链接 https://www.cnblogs.com/wonyun/p/5930333.html
 1. ES 5写法：React.createClass()（老版本用法，不建议使用）；
 2. ES 6写法：React.Component；
 3. 无状态函数式组件，无状态的函数式写法，又称为纯组件SFC。
@@ -51,6 +50,8 @@ React的合成事件系统是属于原生浏览器事件的子集。
 根据返回的新组件和传入组件参数的关系，高阶组件的实现方式可以分为两大类：代理方式的高阶组件，继承方式的高阶组件。
 
 ### References
+
+https://www.cnblogs.com/wonyun/p/5930333.html
 
 https://github.com/Marco2333/react-demo
 
