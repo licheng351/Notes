@@ -1,0 +1,60 @@
+MongoDB  数组操作
+
+查询
+数组子数组元素查询,有两种方式
+使用  “[数组名].[子元素字段名]”  的方式进行匹配。  ----适用于单个条件，如果是多个条件,  则变成数组子元素之间的“或”运算。
+使用  “[数组名]”  $elemMatch  {[子元素字段名]}的方式。  ----可以进行多个条件的匹配，数组子元素之间的“且”运算。
+db.getCollection("ministudentactivityrecords").find(
+  {"records.bookId":  33,  "records.score":  {$gt:  80}}
+)
+db.getCollection("ministudentactivityrecords").find(
+  {records:  {$elemMatch:  {bookId:  33,  score:  {$gt:  90}}}}
+)
+
+数组子元素查询
+db.getCollection("ministudentactivityrecords").find(
+  {fans  :  "5bbc5bd1ccb673422c8f36d7"}
+)
+
+增加
+数组新增子数组
+db.getCollection("ministudentactivityrecords").update(
+  {"_id"  :  ObjectId("5be4207439c1986b139e3d8c")},  
+  {$push    :  {records  :  array(...)}}
+)
+数组新增子元素，$addToSet  --  确保没有重复值添加到数组
+db.getCollection("ministudentactivityrecords").update(
+  {"_id"  :  ObjectId("5be4207439c1986b139e3d8c")},  
+  {$addToSet:  {fans:  sid}}
+)
+
+
+更新
+数组子数组更新
+db.getCollection("ministudentactivityrecords").update(
+  {"_id"  :  ObjectId("5be4207439c1986b139e3d8c"),  "records.sort":1},  
+  {$set:  {"records.$":  array(...)}}
+)
+更新整个数组
+db.getCollection("ministudentactivityrecords").update(
+  {"_id"  :  ObjectId("5be4207439c1986b139e3d8c")},  
+  {$set:  {"records":  array(...)}}
+)
+
+数组子数组某一元素更新
+db.getCollection("ministudentactivityrecords").update(
+  {"_id"  :  ObjectId("5be4207439c1986b139e3d8c"),  "records.sort":1},  
+  {$set:  {"records.$.score":  96}}
+)
+
+删除
+删除数组子元素
+db.getCollection("ministudentactivityrecords").update(
+  {"_id"  :  ObjectId("5be4207439c1986b139e3d8c")},  
+  {$pull    :  {fans  :  "fan"}}
+)
+删除数组子数组
+db.getCollection("ministudentactivityrecords").update(
+  {"_id"  :  ObjectId("5be4207439c1986b139e3d8c")},  
+  {$pull    :  {records  :  {"sort":  1}}}
+)
