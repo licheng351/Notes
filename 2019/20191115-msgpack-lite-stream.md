@@ -4,3 +4,4 @@ msgpack 是一个基于二进制高效的对象序列化 Library，用于跨语�
 ### References
 
 https://zhuanlan.zhihu.com/p/37601326
+https://stackoverflow.com/questions/6355497/performant-entity-serialization-bson-vs-messagepack-vs-json
