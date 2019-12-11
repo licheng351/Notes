@@ -51,6 +51,8 @@ React的合成事件系统是属于原生浏览器事件的子集。
 
 ### References
 
+[Airbnb React/JSX 编码规范](https://github.com/JasonBoy/javascript/blob/master/react/README.md)
+
 https://www.cnblogs.com/wonyun/p/5930333.html
 
 https://github.com/Marco2333/react-demo
