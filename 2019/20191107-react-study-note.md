@@ -49,14 +49,20 @@ React的合成事件系统是属于原生浏览器事件的子集。
 
 根据返回的新组件和传入组件参数的关系，高阶组件的实现方式可以分为两大类：代理方式的高阶组件，继承方式的高阶组件。
 
+### state
+正确地使用 State, 不要直接修改 State,应该使用 setState()。State 的更新可能是异步的,出于性能考虑，React 可能会把多个 setState() 调用合并成一个调用。State 的更新会被合并。
+
+### 数据是向下流动的
+不管是父组件或是子组件都无法知道某个组件是有状态的还是无状态的，并且它们也并不关心它是函数组件还是 class 组件。
+
+这就是为什么称 state 为局部的或是封装的的原因。除了拥有并设置了它的组件，其他组件都无法访问。
+
+组件可以选择把它的 state 作为 props 向下传递到它的子组件中。
+
 ### References
-
-[Airbnb React/JSX 编码规范](https://github.com/JasonBoy/javascript/blob/master/react/README.md)
-
-https://www.cnblogs.com/wonyun/p/5930333.html
-
-https://github.com/Marco2333/react-demo
-
-https://zh-hans.reactjs.org/docs/rendering-elements.html
-
-http://huziketang.mangojuice.top/books/react/lesson1 
+- [Airbnb React/JSX 编码规范](https://github.com/JasonBoy/javascript/blob/master/react/README.md)
+- https://www.cnblogs.com/wonyun/p/5930333.html
+- https://github.com/Marco2333/react-demo
+- https://zh-hans.reactjs.org/docs/rendering-elements.html
+- http://huziketang.mangojuice.top/books/react/lesson1 
+- https://react.docschina.org/docs/state-and-lifecycle.html
