@@ -73,6 +73,5 @@ db.getCollection("teachers").aggregate([
 
 
 ### References
-
-https://docs.mongodb.com/manual/reference/operator/aggregation/arrayElemAt/index.html
-https://github.com/Automattic/mongoose/issues/5735
+- https://docs.mongodb.com/manual/reference/operator/aggregation/arrayElemAt/index.html
+- https://github.com/Automattic/mongoose/issues/5735
