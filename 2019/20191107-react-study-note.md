@@ -59,6 +59,18 @@ React的合成事件系统是属于原生浏览器事件的子集。
 
 组件可以选择把它的 state 作为 props 向下传递到它的子组件中。
 
+### 节流 & 防抖
+如果你有一个 `onClick` 或者 `onScroll` 这样的事件处理器，想要阻止回调被触发的太快，那么可以限制执行回调的速度，可以通过以下几种方式做到这点：
+
+- **节流**：基于时间的频率来进行抽样更改 (例如 [`_.throttle`](https://lodash.com/docs#throttle))
+- **防抖**：一段时间的不活动之后发布更改 (例如 [`_.debounce`](https://lodash.com/docs#debounce))
+- **`requestAnimationFrame` 节流**：基于 requestAnimationFrame 的抽样更改 (例如 [raf-schd]([`raf-schd`](https://github.com/alexreardon/raf-schd)))
+
+可以看这个比较 throttle 和 debounce 的[可视化页面](http://demo.nimius.net/debounce_throttle/)
+
+> **注意：**
+> `_.debounce`、`_.throttle` 和 `raf-schd` 都提供了一个 `cancel` 方法来取消延迟回调。你需要在 `componentWillUnmount` 中调用该方法，或者对代码进行检查来保证在延迟函数有效期间内组件始终挂载。
+
 ### References
 - [Airbnb React/JSX 编码规范](https://github.com/JasonBoy/javascript/blob/master/react/README.md)
 - https://www.cnblogs.com/wonyun/p/5930333.html
@@ -66,3 +78,5 @@ React的合成事件系统是属于原生浏览器事件的子集。
 - https://zh-hans.reactjs.org/docs/rendering-elements.html
 - http://huziketang.mangojuice.top/books/react/lesson1 
 - https://react.docschina.org/docs/state-and-lifecycle.html
+- https://react.docschina.org/docs/faq-functions.html
+- https://css-tricks.com/debouncing-throttling-explained-examples/
