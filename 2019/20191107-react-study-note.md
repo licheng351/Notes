@@ -59,6 +59,25 @@ React的合成事件系统是属于原生浏览器事件的子集。
 
 组件可以选择把它的 state 作为 props 向下传递到它的子组件中。
 
+### ref
+Refs 提供了一种方式，允许我们访问 DOM 节点或在 render 方法中创建的 React 元素。
+
+在典型的 React 数据流中，[props](/docs/components-and-props.html) 是父组件与子组件交互的唯一方式。要修改一个子组件，你需要使用新的 props 来重新渲染它。但是，在某些情况下，你需要在典型数据流之外强制修改子组件。被修改的子组件可能是一个 React 组件的实例，也可能是一个 DOM 元素。对于这两种情况，React 都提供了解决办法。
+
+#### 何时使用 Refs {#when-to-use-refs}
+
+下面是几个适合使用 refs 的情况：
+
+* 管理焦点，文本选择或媒体播放。
+* 触发强制动画。
+* 集成第三方 DOM 库。
+
+避免使用 refs 来做任何可以通过声明式实现来完成的事情。
+
+#### 勿过度使用 Refs {#dont-overuse-refs}
+
+你可能首先会想到使用 refs 在你的 app 中“让事情发生”。如果是这种情况，请花一点时间，认真再考虑一下 state 属性应该被安排在哪个组件层中。通常你会想明白，让更高的组件层级拥有这个 state，是更恰当的。查看 [状态提升](/docs/lifting-state-up.html) 以获取更多有关示例。
+
 ### 节流 & 防抖
 如果你有一个 `onClick` 或者 `onScroll` 这样的事件处理器，想要阻止回调被触发的太快，那么可以限制执行回调的速度，可以通过以下几种方式做到这点：
 
@@ -80,3 +99,4 @@ React的合成事件系统是属于原生浏览器事件的子集。
 - https://react.docschina.org/docs/state-and-lifecycle.html
 - https://react.docschina.org/docs/faq-functions.html
 - https://css-tricks.com/debouncing-throttling-explained-examples/
+- https://react.docschina.org/docs/refs-and-the-dom.html
