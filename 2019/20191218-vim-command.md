@@ -1,5 +1,5 @@
 #### 显示行号
-- :set nu  short for :set number
+:set nu  short for :set number
 
 #### 删除一行
 光标移到删除行， dd 回车
