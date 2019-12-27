@@ -1,5 +1,5 @@
 # daily
-daily note
+
 
 ### 2019
 
