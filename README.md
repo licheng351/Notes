@@ -1,4 +1,7 @@
-# daily
+# note list
+
+### 2020
+- [git-clone-speedup](https://github.com/licheng351/daily/blob/master/2020/20200725-git-clone-and-fetch-speedup.md)
 
 
 ### 2019
