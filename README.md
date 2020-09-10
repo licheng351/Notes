@@ -1,6 +1,7 @@
 # note list
 
 ### 2020
+- [mongodb-toggle-update-operations](https://github.com/licheng351/daily/blob/master/2020/20200910-mongodb-toggle-operations.md)
 - [git-clone-speedup](https://github.com/licheng351/daily/blob/master/2020/20200725-git-clone-and-fetch-speedup.md)
 
 
