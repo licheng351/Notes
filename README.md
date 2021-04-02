@@ -1,5 +1,8 @@
 # note list
 
+### 2021
+- [nodejs-module-api-require](https://github.com/licheng351/Notes/blob/master/2021/2021-04-02-nodejs-module-require.md)
+
 ### 2020
 - [mongodb-toggle-update-operations](https://github.com/licheng351/daily/blob/master/2020/20200910-mongodb-toggle-operations.md)
 - [git-clone-speedup](https://github.com/licheng351/daily/blob/master/2020/20200725-git-clone-and-fetch-speedup.md)
